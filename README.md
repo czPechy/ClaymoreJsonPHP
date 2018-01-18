@@ -1,11 +1,14 @@
 # ClaymoreJsonPHP
 Get JSON stats from Claymore Dual Miner
 
-# Usage
-```php
-require_once 'Client.php';
+# Install with composer
+```sh
+$ composer require czpechy/claymore-api
+```
 
-$host = 'ip_address:3333';
+# How to use
+```php
+$host = 'ip_address:3333'; // IP address for your miner (black console claymore response)
 $client = new \czPechy\Claymore\Client($host);
 
 echo $client->getJson(); // or $client->getData() for object
