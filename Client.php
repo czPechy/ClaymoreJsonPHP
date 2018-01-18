@@ -93,8 +93,8 @@ class Client
                     'eth' => $eth_gpu_hashrate === 'off' ? null : $eth_gpu_hashrate,
                     'dcr' => $dcr_gpus_hashrate[$key] === 'off' ? null : $dcr_gpus_hashrate[$key],
                 ],
-                'temp' => $gpu_temps[$key],
-                'fan' => $gpu_temps[$key+1]
+                'temp' => $gpu_temps[$key*2],
+                'fan' => $gpu_temps[($key*2)+1]
             ];
         }
         return $data;
