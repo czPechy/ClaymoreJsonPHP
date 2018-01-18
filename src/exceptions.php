@@ -1,4 +1,5 @@
 <?php
+namespace czPechy\Claymore;
 
 class ClientException extends \Exception {}
 

@@ -11,3 +11,29 @@ if($parsed_data['version'] !== '10.0 - ETH') {
 } else {
     echo 'OK!' . PHP_EOL;
 }
+
+$structured_data = \czPechy\Claymore\Parser::convertStructure($parsed_data);
+
+if(count($structured_data->gpus) !== 3) {
+    echo 'ERROR!' . PHP_EOL;
+} else {
+    echo 'OK!' . PHP_EOL;
+}
+
+if($structured_data->gpus[1]->temp !== 56) {
+    echo 'ERROR!' . PHP_EOL;
+} else {
+    echo 'OK!' . PHP_EOL;
+}
+
+if($structured_data->eth->hashrate !== 87639) {
+    echo 'ERROR!' . PHP_EOL;
+} else {
+    echo 'OK!' . PHP_EOL;
+}
+
+if($structured_data->dcr->hashrate !== 0) {
+    echo 'ERROR!' . PHP_EOL;
+} else {
+    echo 'OK!' . PHP_EOL;
+}
