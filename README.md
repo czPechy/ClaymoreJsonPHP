@@ -17,23 +17,23 @@ echo $client->getJson(); // or $client->getData() for object
 # Result
 ```json
 {
-  "version":"10.0 - ETH",
+  "version": "10.0 - ETH",
   "runtime": {
-    "minutes":"1332",
-    "start":"2018-01-16 20:49:41"
+    "minutes": 1332,
+    "start": "2018-01-16 20:49:41"
   },
   "eth": {
-    "hashrate":"115156",
-    "shares":{
-      "accepted":"873",
-      "rejected":"0"
+    "hashrate": 115156,
+    "shares": {
+      "accepted": 873,
+      "rejected": 0
     }
   },
-  "drc": {
-    "hashrate":"0",
+  "dcr": {
+    "hashrate": 0,
     "shares": {
-      "accepted":"0",
-      "rejected":"0"
+      "accepted": 0,
+      "rejected": 0
     }
   },
   "pool": "eth-eu1.nanopool.org:9999",
@@ -41,39 +41,38 @@ echo $client->getJson(); // or $client->getData() for object
     {
       "title":"GPU0",
       "hashrate": {
-        "eth":"28735",
-        "dcr":null
+        "eth": 28735,
+        "dcr": null
       },
-      "temp":"66",
-      "fan":"77"
+      "temp": 66,
+      "fan": 77
     },
     {
-      "title":"GPU1",
-      "hashrate":{
-        "eth": "28814",
-        "dcr":null
-      },
-      "temp":"77",
-      "fan":"60"
-    },
-    {
-      "title":"GPU2",
-      "hashrate":
-      {
-        "eth":"28816",
-        "dcr":null
-      },
-      "temp":"60",
-      "fan":"71"
-    },
-    {
-      "title":"GPU3",
+      "title": "GPU1",
       "hashrate": {
-        "eth":"28790",
-        "dcr":null
+        "eth": 28814,
+        "dcr": null
       },
-      "temp":"71",
-      "fan":"45"
+      "temp": 77,
+      "fan": 60
+    },
+    {
+      "title": "GPU2",
+      "hashrate": {
+        "eth": 28816,
+        "dcr": null
+      },
+      "temp": 60,
+      "fan": 71
+    },
+    {
+      "title": "GPU3",
+      "hashrate": {
+        "eth": 28790,
+        "dcr": null
+      },
+      "temp": 71,
+      "fan": 45
     }
   ]
 }
