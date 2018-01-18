@@ -1,66 +1,35 @@
 <?php
 namespace czPechy\Claymore;
 
-class Client
+class Parser
 {
 
-    /** @var string url */
-    protected $remote;
-
-    /** @var string downloaded data */
-    private $original_json;
-
-    /** @var \stdClass data */
-    protected $data;
-
-    public function __construct($remote_address)
-    {
-        $this->remote = $remote_address;
+    /**
+     * @param string $consoleOutput
+     * @return mixed
+     * @throws ParserException
+     */
+    public static function getJsonFromConsole($consoleOutput) {
+        if(!preg_match("~\{.+\}~", $consoleOutput, $result)) {
+            throw new ParserException('Cannot parse data from Claymore Console');
+        }
+        return @array_pop($result);
     }
 
     /**
-     * @return \stdClass
-     * @throws ClientException
+     * @param array $data
+     * @return array
      */
-    public function getData() {
-        if(!$this->data) {
-            $this->downloadData();
-        }
-        return $this->data;
-    }
-
-    /**
-     * @return string
-     * @throws ClientException
-     */
-    public function getJson() {
-        if(!$this->data) {
-            $this->downloadData();
-        }
-
-        return \json_encode($this->data);
-    }
-
-    /**
-     * @throws ClientException
-     */
-    private function downloadData() {
-        $page_data = @file_get_contents('http://' . $this->remote);
-        if(!$page_data) {
-            throw new ClientException('Cannot get data from ' + $this->remote);
-        }
-        if(!preg_match("~\{.+\}~", $page_data, $result)) {
-            throw new ClientException('Cannot parse data from ' + $this->remote);
-        }
-        $this->original_json = @array_pop($result);
-        $json = json_decode($this->original_json);
+    public static function createKeys($data) {
         $keys = ['version', 'runtime', 'eth', 'eth_gpu', 'dcr', 'dcr_gpu', 'temp', 'pool', 'invalid_shares'];
-        $miner_data = array_combine($keys, array_values($json->result));
-
-        $this->data = $this->parse($miner_data);
+        return array_combine($keys, array_values($data));
     }
 
-    private function parse($miner_data) {
+    /**
+     * @param array $miner_data
+     * @return \stdClass
+     */
+    public static function convertStructure($miner_data) {
         $start_time = new \DateTime('-' . $miner_data['runtime'] . ' Minutes');
         list($eth_hashrate, $eth_accepted_shares, $eth_rejected_shares) = explode(';', $miner_data['eth']);
         list($dcr_hashrate, $dcr_accepted_shares, $dcr_rejected_shares) = explode(';', $miner_data['dcr']);
@@ -100,8 +69,4 @@ class Client
         return $data;
     }
 
-
-
 }
-
-class ClientException extends \Exception {}

@@ -1,0 +1,22 @@
+{
+    "name": "czpechy/claymore-api",
+    "description": "Get your miner stats from Claymore Dual Miner",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "homepage": "https://github.com/czPechy/ClaymoreJsonPHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Pecha",
+            "email": "martin@pecha.pro"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "czPechy\\Claymore\\": "src/"
+        },
+        "files": ["src/exceptions.php"]
+    }
+}
