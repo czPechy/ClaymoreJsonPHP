@@ -78,5 +78,9 @@ echo $client->getJson(); // or $client->getData() for object
 }
 ```
 
-
+# Donate me <3
+```
+ETH: 0x7D771A56735500f76af15F589155BDC91613D4aB
+UBIQ: 0xAC08C7B9F06EFb42a603d7222c359e0fF54e0a13
+```
 
