@@ -8,7 +8,7 @@ $ composer require czpechy/claymore-api
 
 # How to use
 ```php
-$host = 'ip_address:3333'; // IP address for your miner (black console claymore response)
+$host = '192.168.1.1:3333'; // IP address & port for your miner (black console claymore response)
 $client = new \czPechy\Claymore\Client($host);
 
 echo $client->getJson(); // or $client->getData() for object
@@ -40,39 +40,47 @@ echo $client->getJson(); // or $client->getData() for object
   "gpus": [
     {
       "title":"GPU0",
+      "name":"GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1",
       "hashrate": {
         "eth": 28735,
         "dcr": null
       },
       "temp": 66,
-      "fan": 77
+      "fan": 77,
+      "shares": 30
     },
     {
       "title": "GPU1",
+      "name":"GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1",
       "hashrate": {
         "eth": 28814,
         "dcr": null
       },
       "temp": 77,
-      "fan": 60
+      "fan": 60,
+      "shares": 30
     },
     {
       "title": "GPU2",
+      "name":"GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1",
       "hashrate": {
         "eth": 28816,
         "dcr": null
       },
       "temp": 60,
-      "fan": 71
+      "fan": 71,
+      "shares": 30
     },
     {
       "title": "GPU3",
+      "name":"GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1",
       "hashrate": {
         "eth": 28790,
         "dcr": null
       },
       "temp": 71,
-      "fan": 45
+      "fan": 45,
+      "shares": 30
     }
   ]
 }

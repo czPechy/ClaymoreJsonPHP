@@ -5,7 +5,7 @@
         "php": ">=5.4.0"
     },
     "homepage": "https://github.com/czPechy/ClaymoreJsonPHP",
-    "license": "MIT",
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
     "authors": [
         {
             "name": "Martin Pecha",
@@ -18,5 +18,9 @@
             "czPechy\\Claymore\\": "src/"
         },
         "files": ["src/exceptions.php"]
+    },
+    "require-dev": {
+        "tracy/tracy": "v2.5.0",
+        "nette/tester": "^2.1@dev"
     }
 }
