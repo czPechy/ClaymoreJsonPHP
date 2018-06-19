@@ -21,6 +21,7 @@
     },
     "require-dev": {
         "tracy/tracy": "v2.3.12",
-        "nette/tester": "v1.7.2"
+        "nette/tester": "v1.7.2",
+        "phpunit/phpunit": "~4.0"
     }
 }
