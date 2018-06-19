@@ -1,4 +1,5 @@
 [![GitHub version](https://badge.fury.io/gh/czPechy%2FClaymoreJsonPHP.svg)](http://badge.fury.io/gh/czPechy%2FClaymoreJsonPHP)
+[![travis-ci.com](https://travis-ci.com/czPechy/ClaymoreJsonPHP.svg?branch=master)](https://travis-ci.com/czPechy/ClaymoreJsonPHP)
 [![codecov.io](https://codecov.io/github/czPechy/ClaymoreJsonPHP/coverage.svg?branch=master)](https://codecov.io/github/czPechy/ClaymoreJsonPHP?branch=master)
 
 # ClaymoreJsonPHP
