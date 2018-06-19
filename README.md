@@ -1,3 +1,6 @@
+[![GitHub version](https://badge.fury.io/gh/czPechy%2FClaymoreJsonPHP.svg)](http://badge.fury.io/gh/czPechy%2FClaymoreJsonPHP)
+[![codecov.io](https://codecov.io/github/czPechy/ClaymoreJsonPHP/coverage.svg?branch=master)](https://codecov.io/github/czPechy/ClaymoreJsonPHP?branch=master)
+
 # ClaymoreJsonPHP
 Get JSON stats from Claymore Dual Miner
 
