@@ -3,7 +3,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 Tester\Environment::setup();
 
-$client = new \czPechy\Claymore\Client('192.168.0.220:3333');
+$client = new \czPechy\Claymore\Client('home.pecha.pro:3333');
 $data = $client->getData();
 $json = $client->getJson();
 

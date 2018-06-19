@@ -20,7 +20,7 @@
         "files": ["src/exceptions.php"]
     },
     "require-dev": {
-        "tracy/tracy": "v2.5.0",
-        "nette/tester": "^2.1@dev"
+        "tracy/tracy": "v2.3.12",
+        "nette/tester": "v1.7.2"
     }
 }
