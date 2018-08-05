@@ -14,9 +14,9 @@ class completeTest extends PHPUnit_Framework_TestCase
         $this->assertInternalType( 'object', $data );
         $this->assertInternalType( 'string', $json );
 
-        $this->assertSame( 'GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1', $data->gpus[ 0 ]->name );
-        $this->assertSame( 'GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1', $data->gpus[ 1 ]->name );
-        $this->assertSame( 'GeForce GTX 1070 Ti, 8192 MB available, 19 compute units, capability: 6.1', $data->gpus[ 2 ]->name );
+        $this->assertSame( 'GeForce GTX 1070 Ti, 8119 MB available, 19 compute units, capability: 6.1  (pci bus 1:0:0)', $data->gpus[ 0 ]->name );
+        $this->assertSame( 'GeForce GTX 1070 Ti, 8119 MB available, 19 compute units, capability: 6.1  (pci bus 2:0:0)', $data->gpus[ 1 ]->name );
+        $this->assertSame( 'GeForce GTX 1070 Ti, 8119 MB available, 19 compute units, capability: 6.1  (pci bus 4:0:0)', $data->gpus[ 2 ]->name );
 
     }
 
