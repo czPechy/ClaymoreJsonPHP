@@ -74,7 +74,14 @@ class Parser
     public static function createKeys( $data )
     {
         $keys = [ 'version', 'runtime', 'eth', 'eth_gpu', 'dcr', 'dcr_gpu', 'temp', 'pool', 'invalid_shares' ];
-        return array_combine( $keys, array_values( $data ) );
+        $dataWithKeys = [];
+        foreach($data as $key => $value) {
+            if(empty($keys)) {
+                break;
+            }
+            $dataWithKeys[ array_shift($keys) ] = $value;
+        }
+        return $dataWithKeys;
     }
 
     /**
