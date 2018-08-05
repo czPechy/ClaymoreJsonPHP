@@ -3,3 +3,4 @@
 /composer.lock
 /tests/output
 /composer.phar
+coverage.xml
