@@ -4,3 +4,4 @@
 /tests/output
 /composer.phar
 coverage.xml
+coverage.html/

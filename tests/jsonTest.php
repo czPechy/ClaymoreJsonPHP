@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-class json extends PHPUnit_Framework_TestCase
+class jsonTest extends PHPUnit_Framework_TestCase
 {
 
     public function testParse()
