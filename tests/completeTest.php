@@ -7,7 +7,7 @@ class completeTest extends PHPUnit_Framework_TestCase
     public function testParse()
     {
 
-        $client = new \czPechy\Claymore\Client( 'home.pecha.pro:3333' );
+        $client = new \czPechy\Claymore\Client( '84.242.85.123:24833' );
         $data = $client->getData();
         $json = $client->getJson();
 
